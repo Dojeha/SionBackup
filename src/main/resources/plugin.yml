@@ -1,0 +1,8 @@
+name: SionBackup
+version: '${project.version}'
+main: kr.dojeha.mcplugin.sionbackup.SionBackup
+author: Dojeha
+description: SionBackup
+commands:
+  backup:
+    description: "/backup"

@@ -1,0 +1,38 @@
+# 백업시 저장될 폴더를 설정합니다.
+# - 서버 경로: "./backups"
+#   서버 폴더 안에 backups 폴더를 생성합니다.
+#
+# - 상위 경로: "../backups"
+#   서버 폴더 밖에 backups 폴더를 생성합니다.
+#
+# - 절대 경로: "D:/backups"
+#   원하는 경로에 backups 폴더를 생성합니다.
+backup_output_dir: "./backups"
+allow_backup: true
+
+# 백업시 로그를 보낼 디스코드 웹훅을 설정합니다.
+# 사용하지 않으려면 []로 비워두고
+# 사용하려면 []안에 웹훅 주소를 문자열로 추가합니다.
+# 웹훅 주소 1개 예시 ) ["웹훅주소"]
+# 웹훅 주소 여러개 예시 ) ["웹훅주소1", "웹훅주소2"]
+send_log_discord_webhooks: []
+
+
+# 백업할 월드들을 설정합니다.
+# 사용하지 않을 월드는 없애도 되며
+# 새로 백업할 월드도 추가할 수 있습니다.
+#
+# - name: 월드 이름입니다.
+#
+# - minute_interval: 몇분 간격으로 백업할지 설정합니다.
+#   정수만 설정할 수 있고, 음수이거나 0이면 백업하지 않습니다.
+#   백업이 설정한 간격보다 오래걸릴 경우 스킵됩니다.
+backup_worlds:
+  - name: "world"
+    minute_interval: 120
+
+  - name: "world_nether"
+    minute_interval: 1440
+
+  - name: "world_the_end"
+    minute_interval: 2880
